@@ -21,7 +21,9 @@
 
 ## オイラー関数
 
-整数 $N$に対して、 集合 $Z_{N}^{*}= \lbrace x \mid 1 \le x \le N-1, gcd(x, N) \rbrace \phi \lparen N \rparen$の要素数を オイラー関数 $\phi \lparen N \rparen$という。
+* 整数 $N$に対して、 集合 $Z_{N}^{*}= \lbrace x \mid 1 \le x \le N-1, gcd(x, N) \rbrace$の要素数を オイラー関数 $\phi \lparen N \rparen$という
+* $p, q$が異なる奇素数のとき、 $\phi \lparen p \rparen =p-1, \phi \lparen p^{e} \rparen =p^{e-1}(p-1), \phi \lparen pq \rparen =(p-1)(q-1)$である
+* 
 
 
 # 実装
