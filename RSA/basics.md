@@ -22,7 +22,7 @@
 * 整数 $N$に対して、 集合 $Z_{N}^{*}= \lbrace x \mid 1 \le x \le N-1, gcd(x, N) \rbrace$の要素数を オイラー関数 $\phi \lparen N \rparen$という
 * $p, q$が異なる奇素数のとき、 $\phi \lparen p \rparen =p-1, \phi \lparen p^{e} \rparen =p^{e-1}(p-1), \phi \lparen pq \rparen =(p-1)(q-1)$である
 * オイラーの定理
- * すべての $a \in $Z_{N}^{*}$に対して、 $a^{\phi \lparen N \rparen} \qeuiv 1 \pmod{N}$が成り立つ
+ * すべての $a\in{$Z_{N}^{*}}$に対して、 $a^{\phi \lparen N \rparen} \equiv 1 \pmod{N}$が成り立つ
 
 
 # 実装
