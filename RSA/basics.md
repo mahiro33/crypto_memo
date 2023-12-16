@@ -21,7 +21,7 @@
 
 ## オイラー関数
 
-整数 $N$に対して、 集合 $Z_{N}^{*}= \lbrace x \mid 1 \le x \le N-1, gcd(x, N) \rbrace $\phi{N}$の要素数を オイラー関数$\phi{N}$という。
+整数 $N$に対して、 集合 $Z_{N}^{*}= \lbrace x \mid 1 \le x \le N-1, gcd(x, N) \rbrace \phi{N}$の要素数を オイラー関数　$\phi{N}$という。
 
 
 # 実装
