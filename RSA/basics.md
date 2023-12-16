@@ -4,7 +4,7 @@
 * 入力：セキュリティパラメータ $k$
 * 出力：公開鍵 $(N, e)$、秘密鍵 $(p, q, d)$
 * $k$に対応するサイズの2つの素数 $p, q$をランダムに選択する
-* $N=pq, L=\phi(N)$として $L$と互いに素な正整数$e$を選択し、$d=e^{-1}\mod{L}$を計算する
+* $N=pq, L=\phi(N)$として $L$と互いに素な正整 数$e$を選択し、 $d=e^{-1}\mod{L}$を計算する
   * $\phi(N)$はオイラー関数（後述）
   * $e=65537$ (0x10001)であることが多い
   * $p, q$が異なる素数であれば、 $L=(p-1)(q-1)$となる
@@ -29,3 +29,20 @@
 
 
 # 実装
+
+```python
+from Crypto.Util.number import getPrime, inverse, bytes_to_long, long_to_bytes
+
+p = getPrime(1024)
+q = getPrime(1024)
+N = p * q
+e = 0x10001
+d = inverse(e, (p - 1) * (q - 1))
+
+m = b"this_is_my_message"
+c = pow(bytes_to_long(m), e, N)
+print("ciphertext:", c)
+dec_m = pow(c, d, N)
+print("plaintext:", long_to_bytes(dec_m).decode())
+# plaintext: this_is_my_message
+```
